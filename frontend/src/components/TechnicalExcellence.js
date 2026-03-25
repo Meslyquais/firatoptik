@@ -47,15 +47,19 @@ export const TechnicalExcellence = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-12 pt-8 border-t border-[#E5E5E5]">
-              {["Nikon", "Seiko", "Rodenstock", "Zeiss"].map((name) => (
-                <span
-                  key={name}
-                  className="font-playfair font-light text-2xl sm:text-3xl text-[#050505] tracking-tight"
-                >
-                  {name}
-                </span>
-              ))}
+            <div className="flex flex-wrap items-center gap-14 sm:gap-20 pt-8 border-t border-[#E5E5E5]">
+              <svg viewBox="0 0 160 40" className="h-8 sm:h-11" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="32" fill="#050505" fontFamily="'Inter', sans-serif" fontWeight="700" fontSize="32" letterSpacing="2">NIKON</text>
+              </svg>
+              <svg viewBox="0 0 130 40" className="h-8 sm:h-11" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="32" fill="#050505" fontFamily="'Inter', sans-serif" fontWeight="300" fontSize="32" letterSpacing="5">ZEISS</text>
+              </svg>
+              <svg viewBox="0 0 160 40" className="h-8 sm:h-11" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="32" fill="#050505" fontFamily="'Inter', sans-serif" fontWeight="300" fontSize="30" letterSpacing="4">SEIKO</text>
+              </svg>
+              <svg viewBox="0 0 310 40" className="h-8 sm:h-11" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="32" fill="#050505" fontFamily="'Inter', sans-serif" fontWeight="600" fontSize="28" letterSpacing="3">RODENSTOCK</text>
+              </svg>
             </div>
           </div>
 

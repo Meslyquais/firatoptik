@@ -35,26 +35,26 @@ export const Navbar = () => {
           <button
             onClick={() => scrollTo("markalar")}
             data-testid="nav-brands"
-            className="font-inter text-[11px] tracking-[0.2em] text-[#555] hover:text-[#050505] uppercase"
+            className="font-inter text-[11px] tracking-[0.2em] text-[#555] hover:text-[#050505]"
             style={{ transition: "color 0.3s" }}
           >
-            Markalar
+            MARKALAR
           </button>
           <button
             onClick={() => scrollTo("teknik")}
             data-testid="nav-tech"
-            className="font-inter text-[11px] tracking-[0.2em] text-[#555] hover:text-[#050505] uppercase"
+            className="font-inter text-[11px] tracking-[0.2em] text-[#555] hover:text-[#050505]"
             style={{ transition: "color 0.3s" }}
           >
-            Teknik
+            TEKNİK
           </button>
           <button
             onClick={() => scrollTo("iletisim")}
             data-testid="nav-contact"
-            className="font-inter text-[11px] tracking-[0.2em] text-[#555] hover:text-[#050505] uppercase"
+            className="font-inter text-[11px] tracking-[0.2em] text-[#555] hover:text-[#050505]"
             style={{ transition: "color 0.3s" }}
           >
-            İletişim
+            İLETİŞİM
           </button>
         </div>
 
@@ -74,21 +74,21 @@ export const Navbar = () => {
         >
           <button
             onClick={() => scrollTo("markalar")}
-            className="block w-full text-left font-inter text-sm tracking-[0.2em] text-[#050505] uppercase"
+            className="block w-full text-left font-inter text-sm tracking-[0.2em] text-[#050505]"
           >
-            Markalar
+            MARKALAR
           </button>
           <button
             onClick={() => scrollTo("teknik")}
-            className="block w-full text-left font-inter text-sm tracking-[0.2em] text-[#050505] uppercase"
+            className="block w-full text-left font-inter text-sm tracking-[0.2em] text-[#050505]"
           >
-            Teknik
+            TEKNİK
           </button>
           <button
             onClick={() => scrollTo("iletisim")}
-            className="block w-full text-left font-inter text-sm tracking-[0.2em] text-[#050505] uppercase"
+            className="block w-full text-left font-inter text-sm tracking-[0.2em] text-[#050505]"
           >
-            İletişim
+            İLETİŞİM
           </button>
         </div>
       )}

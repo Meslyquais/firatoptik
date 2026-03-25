@@ -223,9 +223,9 @@ async def get_settings():
     settings = await db.settings.find_one({}, {"_id": 0})
     if not settings:
         return {
-            "phone": "+90 555 123 4567",
-            "whatsapp": "+905551234567",
-            "address": "Fırat Optik, İstanbul",
+            "phone": "0532 260 78 16",
+            "whatsapp": "+905322607816",
+            "address": "Rızvanoğlu Karya, İhsaniye, Yüce Sk. A Blok No: 36/A Nilüfer / Bursa",
             "email": "info@firatoptik.com",
         }
     return settings
@@ -361,9 +361,9 @@ async def seed_data():
         await db.brands.insert_one(brand_data)
 
     await db.settings.insert_one({
-        "phone": "+90 555 123 4567",
-        "whatsapp": "+905551234567",
-        "address": "Fırat Optik, İstanbul",
+        "phone": "0532 260 78 16",
+        "whatsapp": "+905322607816",
+        "address": "Rızvanoğlu Karya, İhsaniye, Yüce Sk. A Blok No: 36/A Nilüfer / Bursa",
         "email": "info@firatoptik.com",
     })
 

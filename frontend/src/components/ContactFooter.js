@@ -42,8 +42,8 @@ export const ContactFooter = () => {
           </div>
 
           <div>
-            <h3 className="font-inter text-[10px] tracking-[0.25em] uppercase text-white/40 mb-6">
-              İletişim
+            <h3 className="font-inter text-[10px] tracking-[0.25em] text-white/40 mb-6">
+              İLETİŞİM
             </h3>
             <div className="space-y-5">
               <a
