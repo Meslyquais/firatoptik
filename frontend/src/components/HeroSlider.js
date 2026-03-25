@@ -8,6 +8,7 @@ const slides = [
     ctaAction: "markalar",
     image:
       "https://images.unsplash.com/photo-1716596991057-4f54881371fa?crop=entropy&cs=srgb&fm=jpg&q=85",
+    bgPosition: "center 25%",
   },
   {
     title: "Cam kalitesinde standart değil, seviye sunuyoruz",
@@ -16,6 +17,7 @@ const slides = [
     ctaAction: "teknik",
     image:
       "https://images.pexels.com/photos/7066266/pexels-photo-7066266.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    bgPosition: "center 20%",
   },
   {
     title: "Seçim değil, doğru eşleşme",
@@ -24,6 +26,7 @@ const slides = [
     ctaAction: "iletisim",
     image:
       "https://images.unsplash.com/photo-1587987746776-302404b98970?crop=entropy&cs=srgb&fm=jpg&q=85",
+    bgPosition: "center 30%",
   },
 ];
 
@@ -69,8 +72,8 @@ export const HeroSlider = () => {
           style={{ transition: "opacity 0.7s ease-in-out" }}
         >
           <div
-            className="absolute inset-0 bg-cover bg-center scale-105"
-            style={{ backgroundImage: `url(${slide.image})` }}
+            className="absolute inset-0 bg-cover scale-105"
+            style={{ backgroundImage: `url(${slide.image})`, backgroundPosition: slide.bgPosition }}
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
