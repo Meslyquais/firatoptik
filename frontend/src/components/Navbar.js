@@ -26,9 +26,18 @@ export const Navbar = () => {
         <Link
           to="/"
           data-testid="nav-logo"
-          className="font-inter font-thin tracking-[0.3em] text-[#050505] text-base sm:text-lg uppercase"
+          className="flex items-center gap-2"
         >
-          FIRAT OPTİK
+          <img
+            src="https://customer-assets.emergentagent.com/job_luxury-lens-gallery/artifacts/oua3ymc2_firat-optik-wordmark%404x.png"
+            alt="Fırat Optik"
+            className="h-5 sm:h-6 object-contain"
+          />
+          <img
+            src="https://customer-assets.emergentagent.com/job_luxury-lens-gallery/artifacts/bcwgjwjz_firat-optik-icon%404x.png"
+            alt=""
+            className="h-5 sm:h-6 object-contain"
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-10">

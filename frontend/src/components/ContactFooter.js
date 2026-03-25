@@ -35,10 +35,16 @@ export const ContactFooter = () => {
             <h2 className="font-inter font-thin tracking-[0.3em] text-base uppercase mb-6">
               FIRAT OPTİK
             </h2>
-            <p className="font-inter font-light text-sm text-white/40 leading-[1.8]">
+            <p className="font-inter font-light text-sm text-white/40 leading-[1.8] mb-8">
               Premium görme deneyimi ve moda kürasyonu. Kalite ve zarafetin
               buluşma noktası.
             </p>
+            <img
+              src="https://customer-assets.emergentagent.com/job_luxury-lens-gallery/artifacts/6vp80y5s_firat-optik-logo%404x.png"
+              alt="Fırat Optik Logo"
+              className="h-16 sm:h-20 object-contain"
+              style={{ filter: "invert(1)" }}
+            />
           </div>
 
           <div>
