@@ -7,6 +7,17 @@ import { ArrowLeft } from "lucide-react";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
+const BG_POSITIONS = {
+  "gucci": "center 15%",
+  "prada": "center 15%",
+  "dior": "center 25%",
+  "tom-ford": "center 20%",
+  "miu-miu": "center 20%",
+  "celine": "center 30%",
+  "fendi": "center 25%",
+  "persol": "center 30%",
+};
+
 export default function BrandPage() {
   const { slug } = useParams();
   const [brand, setBrand] = useState(null);
@@ -60,8 +71,8 @@ export default function BrandPage() {
 
       <section className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${brand.image_url})` }}
+          className="absolute inset-0 bg-cover"
+          style={{ backgroundImage: `url(${brand.image_url})`, backgroundPosition: BG_POSITIONS[slug] || "center center" }}
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 h-full flex items-end pb-12 sm:pb-16 px-6 sm:px-12">

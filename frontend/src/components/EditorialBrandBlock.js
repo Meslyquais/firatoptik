@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
 
+const BG_POSITIONS = {
+  "gucci": "center 15%",
+  "prada": "center 15%",
+  "dior": "center 25%",
+  "tom-ford": "center 20%",
+  "miu-miu": "center 20%",
+  "celine": "center 30%",
+  "fendi": "center 25%",
+  "persol": "center 30%",
+};
+
 export const EditorialBrandBlock = ({ brand, index }) => {
   const isEven = index % 2 === 0;
   const isTall = index % 3 === 0;
+  const bgPos = BG_POSITIONS[brand.slug] || "center center";
 
   return (
     <Link
@@ -12,9 +24,10 @@ export const EditorialBrandBlock = ({ brand, index }) => {
       style={{ height: isTall ? "80vh" : "65vh", minHeight: "400px" }}
     >
       <div
-        className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-105"
+        className="absolute inset-0 bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105"
         style={{
           backgroundImage: `url(${brand.image_url})`,
+          backgroundPosition: bgPos,
           transition: "filter 0.7s ease, transform 0.7s ease",
         }}
       />
