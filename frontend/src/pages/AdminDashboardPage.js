@@ -20,6 +20,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "../components/ui/dialog";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
@@ -445,6 +446,9 @@ export default function AdminDashboardPage() {
             <DialogTitle className="font-inter text-base">
               {editingBrand ? "Marka Düzenle" : "Yeni Marka Ekle"}
             </DialogTitle>
+            <DialogDescription className="text-xs text-[#999]">
+              Marka bilgilerini girin
+            </DialogDescription>
           </DialogHeader>
           <div className="space-y-4 pt-2">
             <div>
@@ -565,6 +569,9 @@ export default function AdminDashboardPage() {
             <DialogTitle className="font-inter text-base">
               {editingProduct ? "Ürün Düzenle" : "Yeni Ürün Ekle"}
             </DialogTitle>
+            <DialogDescription className="text-xs text-[#999]">
+              Ürün bilgilerini girin
+            </DialogDescription>
           </DialogHeader>
           <div className="space-y-4 pt-2">
             <div>
