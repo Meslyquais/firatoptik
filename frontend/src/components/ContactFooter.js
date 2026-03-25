@@ -86,12 +86,32 @@ export const ContactFooter = () => {
 
           <div>
             <h3 className="font-inter text-[10px] tracking-[0.25em] uppercase text-white/40 mb-6">
-              Adres
+              ADRES
             </h3>
-            <p className="flex items-start gap-3 font-inter text-sm text-white/70 leading-relaxed">
+            <a
+              href="https://maps.google.com/?q=F%C4%B1rat+Optik+R%C4%B1zvano%C4%9Flu+Karya+Nil%C3%BCfer+Bursa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 font-inter text-sm text-white/70 leading-relaxed hover:text-white"
+              style={{ transition: "color 0.3s" }}
+              data-testid="footer-address"
+            >
               <MapPin size={15} strokeWidth={1.5} className="mt-0.5 shrink-0" />
               {settings.address}
-            </p>
+            </a>
+            <div className="mt-6 overflow-hidden border border-white/10" style={{ borderRadius: 0 }}>
+              <iframe
+                title="Fırat Optik Konum"
+                src="https://maps.google.com/maps?q=F%C4%B1rat+Optik+R%C4%B1zvano%C4%9Flu+Karya+%C4%B0hsaniye+Y%C3%BCce+Sk+Nil%C3%BCfer+Bursa&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="200"
+                style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(83%)" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                data-testid="footer-map"
+              />
+            </div>
           </div>
         </div>
 
