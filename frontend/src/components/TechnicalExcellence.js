@@ -47,11 +47,11 @@ export const TechnicalExcellence = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-8 pt-6 border-t border-[#E5E5E5]">
+            <div className="flex flex-wrap items-center gap-12 pt-8 border-t border-[#E5E5E5]">
               {["Nikon", "Seiko", "Rodenstock", "Zeiss"].map((name) => (
                 <span
                   key={name}
-                  className="font-inter text-[10px] tracking-[0.2em] text-[#AAAAAA] uppercase"
+                  className="font-playfair font-light text-2xl sm:text-3xl text-[#050505] tracking-tight"
                 >
                   {name}
                 </span>
@@ -62,7 +62,7 @@ export const TechnicalExcellence = () => {
           <div className="relative order-1 lg:order-2">
             <div className="aspect-[4/5] overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/4307314/pexels-photo-4307314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                src="https://images.unsplash.com/photo-1652155379208-ec6cdc8b7951?crop=entropy&cs=srgb&fm=jpg&q=85"
                 alt="Optik lens teknolojisi"
                 className="w-full h-full object-cover grayscale hover:grayscale-0"
                 style={{ transition: "filter 0.7s ease" }}
