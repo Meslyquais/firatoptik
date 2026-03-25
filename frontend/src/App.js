@@ -1,50 +1,38 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import HomePage from "@/pages/HomePage";
+import BrandPage from "@/pages/BrandPage";
+import AdminLoginPage from "@/pages/AdminLoginPage";
+import AdminDashboardPage from "@/pages/AdminDashboardPage";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+function App() {
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    helloWorldApi();
+    const timer = setTimeout(() => setLoading(false), 2200);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+      <div
+        data-testid="loading-screen"
+        className={`fixed inset-0 z-[100] bg-[#050505] flex items-center justify-center transition-opacity duration-700 ${
+          loading ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <h1 className="font-inter font-thin tracking-[0.3em] text-white text-2xl sm:text-4xl uppercase select-none">
+          FIRAT OPTİK
+        </h1>
+      </div>
 
-function App() {
-  return (
-    <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/marka/:slug" element={<BrandPage />} />
+          <Route path="/admin/giris" element={<AdminLoginPage />} />
+          <Route path="/admin" element={<AdminDashboardPage />} />
         </Routes>
       </BrowserRouter>
     </div>
