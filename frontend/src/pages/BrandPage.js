@@ -8,14 +8,19 @@ import { ArrowLeft } from "lucide-react";
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const BG_POSITIONS = {
-  "gucci": "center 15%",
-  "prada": "center 15%",
   "dior": "center 25%",
+  "gucci": "center 15%",
+  "cartier": "center 20%",
   "tom-ford": "center 20%",
+  "celine": "center center",
+  "prada": "center 15%",
   "miu-miu": "center 20%",
-  "celine": "center 30%",
+  "bvlgari": "center 25%",
   "fendi": "center 25%",
+  "bottega-veneta": "center 20%",
   "persol": "center 30%",
+  "etnia-barcelona": "center 25%",
+  "lindberg": "center 35%",
 };
 
 export default function BrandPage() {

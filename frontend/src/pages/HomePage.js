@@ -36,7 +36,7 @@ export default function HomePage() {
         </div>
         <div>
           {brands.map((brand, index) => (
-            <EditorialBrandBlock key={brand.id} brand={brand} index={index} />
+            <EditorialBrandBlock key={brand.id} brand={brand} index={index} total={brands.length} />
           ))}
         </div>
       </section>

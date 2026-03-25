@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
 
 const BG_POSITIONS = {
-  "gucci": "center 15%",
-  "prada": "center 15%",
   "dior": "center 25%",
+  "gucci": "center 15%",
+  "cartier": "center 20%",
   "tom-ford": "center 20%",
+  "celine": "center center",
+  "prada": "center 15%",
   "miu-miu": "center 20%",
-  "celine": "center 30%",
+  "bvlgari": "center 25%",
   "fendi": "center 25%",
+  "bottega-veneta": "center 20%",
   "persol": "center 30%",
+  "etnia-barcelona": "center 25%",
+  "lindberg": "center 35%",
 };
 
-export const EditorialBrandBlock = ({ brand, index }) => {
+export const EditorialBrandBlock = ({ brand, index, total }) => {
   const isEven = index % 2 === 0;
   const isTall = index % 3 === 0;
   const bgPos = BG_POSITIONS[brand.slug] || "center center";
@@ -43,7 +48,7 @@ export const EditorialBrandBlock = ({ brand, index }) => {
         }`}
       >
         <p className="font-inter text-[10px] tracking-[0.3em] text-white/40 uppercase mb-3">
-          {String(index + 1).padStart(2, "0")} / 12
+          {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
         </p>
         <h2
           data-testid={`brand-name-${brand.slug}`}
